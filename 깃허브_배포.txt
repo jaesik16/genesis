@@ -1,0 +1,92 @@
+닷홈
+answotlr12.dothome.co.kr/gn
+
+리파지토리
+genesis
+
+origin 오리진(리파지토리 웹주소 URL)
+https://github.com/jaesik16/genesis.git
+
+
+명령어 우분투(윈도우에서 리눅스 명령어)
+깃배쉬
+gitbash
+https://git-scm.com/
+
+깃허브(버전관리==형상관리, 협업)
+// 1. 깃 설정
+git init
+
+
+// 2. 목록보기 숨긴목록까지 모두 보기
+ls -la
+
+// 3. 환경설정
+웹브라우저에는 로그인 상태에서
+본인 아이디(name) 등록
+본인 이메일(email) 등록
+
+
+git config user.name "jaesik16"
+git config user.email "qweqwexz@naver.com"
+git config user.name
+git config user.email
+
+// 4. 원격으로 오리진 등록(추가 add)
+http://
+https://  ssl 웹 보안 인증서
+
+https://github.com/jaesik16/genesis.git
+CORS
+프록시 서버
+오리진 헤더코딩 사용가능하도록 정책
+
+추가
+git remote add origin https://github.com/jaesik16/genesis.git
+
+오리진 주소가 잘못 기록된 경우 삭제
+git remote remove origin https://github.com/jaesik16/genesis.git
+
+다시 추가
+git remote add origin https://github.com/jaesik16/genesis.git
+
+
+확인
+git remote -v
+
+origin  https://github.com/jaesik16/genesis.git (fetch)
+origin  https://github.com/jaesik16/genesis.git (push)
+
+
+clear은 화면지우기(청소)
+
+모든 리스트 보기
+git config --list
+
+
+// 5. 스테이징
+git add .
+
+// 6. 커밋
+git commit -m '제네시스 메인 슬라이드'
+
+// 7. 푸쉬
+git push origin master
+
+// 8. 인증이 되어야 푸시 완료
+window => 설정 => 자격 증명 관리자 검색 => window 자격 증명 관리 클릭
+github 웹주소가 있고 본인의 user.name user.password가 저장되어 관리된다.
+한 컴퓨터에서 여러 사용자가 사용시 추가 등록해서 사용 가능
+
+// 9. 깃허브에서 새로고침 올라온 파일 확인
+푸쉬한 모든 데이터 확인
+
+// 10. settings 클릭
+
+// 11. 좌측 카테고리 메뉴 중 Paegs 클릭
+
+// 12. Github Pages => Branch => master클릭 => save 클릭 => 1분~3분 대기 => 새로고침
+
+// 13. 상단에 배포주소가 나타난다. Visit Site 클릭 배포된 홈페이지 브라우저에 나타난다.
+https://jaesik16.github.io/genesis
+https://jaesik16.github.io/genesis/ <= 배포된 주소
