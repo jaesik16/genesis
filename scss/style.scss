@@ -7,8 +7,8 @@
 #wrap #header {
     z-index: 3;
     position: fixed;
-    left:0;
     top:0;
+    left:0;
     width:100%;
     height: 69px;
     background: #111;
@@ -26,26 +26,43 @@
     position: relative;
     width: 100%;
     // 슬라이드 전체 선택 안함
-    user-select: none;
-    cursor: grab;
 }
 #wrap #main #section1 .slide-container .slide-view {
     position: relative;
     z-index: 1;
     width: 100%;
-    overflow: hidden;    
-    overflow: visible;    
+    overflow: hidden;
+    cursor: grab;  
+    user-select: none;
 }
 
 #wrap #main #section1 .slide-container .page-btn-box {
     z-index: 2;
     position: absolute;
-    bottom:10%;
+    bottom: 10%;
     left:0;
     width:100%;
     display: flex;
     justify-content: center;
+    transform: scale(1);
 }
+
+@media all and (max-width: 1600px) {
+    #wrap #main #section1 .slide-container .page-btn-box {
+        transform: scale(0.9);
+    } 
+}
+@media all and (max-width: 1024px) {
+    #wrap #main #section1 .slide-container .page-btn-box {
+        transform: scale(0.8);
+    } 
+}
+@media all and (max-width: 500px) {
+    #wrap #main #section1 .slide-container .page-btn-box {
+        transform: scale(0.6);
+    } 
+}
+
 /* 페이지 버튼 */
 #wrap #main #section1 .slide-container .page-btn-box a.page-btn {
     width: 12px;
@@ -120,6 +137,7 @@
     display: flex;    
     position: relative;
     margin-left: -100%; //-1903px
+   
 }
 #wrap #main #section1 .slide-container .slide-view .slide-wrap .slide {
     width: 100%;
@@ -131,61 +149,99 @@
     width: auto;
     transform: translateX(-324px); 
 }
-// 해상도 1800 픽셀 이하 에서는 이미지 크기를
+// 해상도 1800 픽셀 이하에서는 이미지크기를
 // 자바스크립트에서 반응형을 프로그래밍
 // 너비 100%
-// @media all and (max-width: 1800px) {
+// @media  all  and  (max-width: 1800px){
 //     #wrap #main #section1 .slide-container .slide-view .slide-wrap .slide img {
-//         width: 100%;
-//         transform: translateX(-324px); 
-//     }
+//         width: 100%;      
+//     }  
 // }
 
 
-
-// 미디어 all 매체(TV,Print,Mobile,Screen)
-//최대크기에서 시작해서 점점작아짐
-// max-width 데스크탑을 개발하고
-// 노트북 => 테블릿 => 모바일
-// @media all  and (max-width: 2580px) {
+// 미디어 all 매체(TV, Print, Mobile, Screen)
+// max-width 
+// 데스크탑 => 노트북 => 태블릿 => 모바일
+// @media all and (min-width: 2580px) {
     
 // }
-// @media all  and (max-width: 1903px) {
+// @media all and (max-width: 1903px) {
     
 // }
-// @media all  and (max-width: 1680px) {
-    
-// }
-// @media all  and (max-width: 1280px) {
+// @media all and (max-width: 1680px) {
     
 // }
 
+// @media all and (max-width: 1280px) {
+    
 
-//최소크기에서 시작해서 점점커짐
-// min-width
+// }
+// @media all and (min-width: 1024px) {
+    
+// }
+// @media all and (min-width: 640px) {
+    
+// }
+// @media all and (min-width: 480px) {
+    
+// }
+// @media all and (min-width: 320px) {
+    
+// }
+
+// 최소크기에서 시작 min-width
 // 모바일 => 태블릿 => 노트북 => 데스크탑
-// @media all  and (min-width: 320px) {
+// @media all and (min-width: 320px) {
     
 // }
 
+// @media all and (min-width: 480px) {
+    
+// }
+
+// @media all and (min-width: 640px) {
+    
+// }
+
+// @media all and (min-width: 760px) {
+    
+// }
+
+// @media all and (min-width: 1024px) {
+    
+// }
+
+// @media all and (min-width: 1280px) {
+    
+// }
+
+// @media all and (min-width: 1903px) {
+    
+// }
+
+// @media all and (min-width: 2580px) {
+    
+// }
 
 #wrap {
     width:100%;
     overflow: hidden;
     #main {
-        overflow: hidden;
         width:100%;
+        overflow: hidden;
         #section2 {
-            overflow: hidden;
+            
             width:100%;
             background: #111;
-            padding: 200px 140px; //미디어쿼리에서 수정
+            padding: 200px 140px;  // 미디어쿼리에서 수정
             .container {
                 width:100%;
                 margin: 0 auto; 
-                
-                padding-left: 198px; //미디어쿼리에서 수정
+
+                padding-left: 198px;  // 미디어쿼리에서 수정
+
                 .title {
+                    user-select: none;
                     position: relative;
                     z-index: 2;
                     width:100%;
@@ -252,35 +308,36 @@
                             }
                         }
                     }
-
+                    
                 }
-                @media all and (max-width:500px) {
-                .title{
-                    padding: 0 20px;
-                    h2 {
-                        font-size: 32px;
-                    }
-                    p {
-                        font-size: 13px;
-                    }
-                    .select-box{
-                        width: 80%;
-                    }
-                }    
-            }
+                @media all and (max-width: 500px) {
+                    .title {
+                        padding: 0 20px;
+                        h2 {
+                            font-size: 32px;
+                        }
+                        p {
+                            font-size: 13px;                                                        
+                        }
+                        .select-box {
+                            width: 80%;                            
+                        }
+                    }                    
+                }
+
                 .content {
                     position: relative;
                     z-index: 1;
                     width:100%;
                     padding-top:100px;
                     .slide-container {
-                        user-select: none;
+                        user-select: none;  //모든요소 선택안함
                         width:100%;
                         .slide-view {
                             width:100%;  // 한화면의 너비만 보여줌(3개)
                             overflow: hidden;
                             .slide-wrap {
-                                 // 마우스 터치스와이프 사용 가능하게함.
+
                                 width: 488.328px * 10;
                                 display: flex;
                                 flex-flow: row nowrap;
@@ -291,8 +348,8 @@
                                 position: relative;
                                 // left: -488.328px * $cnt;
                                 .slide {
-                                    width: 488.328px;  // js에서 비율적용 적용
-                                    height: 431.953px; // js에서 비율적용 적용
+                                    width: 488.328px; // js 반응형 비율 적용
+                                    height: 431.953px; // js 반응형 비율 적용
                                     .gap {
                                         margin:0 20px;
                                         height: 100%;
@@ -300,12 +357,13 @@
                                             background: #151515;
                                             width:  100%;
                                             height: 100%;
-                                            // 내부 너비를 기준으로 비율계산
-                                            // padding: 37px 40px 49px 40px;
+                                            // height: 431.953px;  // js 비율적용
+                                            // 내부너비를 기준으로 비율계산
+                                            // padding: 37px 40px 49px 40px;                            
                                             padding: 8.25% 8.92% 10.93% 8.92%;
                                             display: flex;
                                             flex-flow: column nowrap;
-                                            justify-content: space-between;
+                                            // justify-content: space-between;
                                             transition:all 0.6s ease-in-out;
                                             border:1px solid #151515;
                                             .top {
@@ -332,10 +390,9 @@
                                             }
                                             .middle {
                                                 margin: auto 0 auto 0;
-                                                pointer-events: none;
                                                 width:100%;
+                                                pointer-events: none;  // 마우스 터치스와이프 사용 가능하게함.
                                                 img {
-                                                    
                                                     width:100%;
                                                 }
                                             }
@@ -344,7 +401,7 @@
                                                 width:100%;
                                                 button {
                                                     width: 100%;
-                                                    height: 56px; // 줄 높이는 높이와 같다  
+                                                    height: 56px; // 줄높이 높이와 같다.
                                                     background: #111;
                                                     border: 1px solid #fff;
                                                     color:#fff;
@@ -375,30 +432,23 @@
                                                         }
                                                     }
                                                 }
-                                                // @media all and (max-width:1642px) {
-                                                //     button {
-                                                //         // height: 2.943vw;
-                                                //         height: 2.943vw;
-                                                //     }
-                                                // }
-                                                @media all and (max-width:1620px) {
+
+                                                @media all and (max-width: 1642px) {
                                                     button {
-                                                        // height: 2.943vw;
                                                         height: 50px;
                                                     }
                                                 }
-                                                @media all and (max-width:1425px) {
+                                                @media all and (max-width: 1425px) {
                                                     button {
-                                                        // height: 2.943vw;
-                                                        height: 46px;
+                                                        height: 46px;  
                                                     }
                                                 }
-                                                @media all and (max-width:1280px) {
+                                                @media all and (max-width: 1280px) {
                                                     button {
-                                                        // height: 2.943vw;
-                                                        height: 45px;
+                                                        height: 45px;  
                                                     }
                                                 }
+                                               
                                             }
 
                                             &:hover {
@@ -416,6 +466,7 @@
                                     }
                                 }
                             }
+                           
                         }
 
 
@@ -494,31 +545,35 @@
                             
                           
                         }
-                        @media all and (max-width:500px){
-                            .page-btn-box{
+
+                        @media all and (max-width: 500px) {
+                            .page-btn-box {
                                 transform: scale(0.8);
                             }
                         }
                     }
                 }
             }
-            // 1. 1642px이하에서 패딩레프트 좌측 값 0으로 설정하기
-            @media all and (max-width:1642px) { // <=1642 1642이하
+            // 1. 1642 픽셀 이하에서 패딩 좌측 값 0으로 설정
+            @media all and (max-width:1642px) {  // <=1642
                 .container {
                     padding-left: 0;
                 }
             }
         }
-        @media all and (max-width:780px) {
+
+        @media all and (max-width: 780px) {
             #section2 {
-                padding: 80px 50px;
+                padding: 80px 50px;  
             }
         }
-        @media all and (max-width:500px) {
+
+        @media all and (max-width: 500px) {
             #section2 {
-                padding: 80px 0;
+                padding: 80px 0;  
             }
         }
+    
     }
 }
 

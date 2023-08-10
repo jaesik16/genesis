@@ -1,92 +1,130 @@
 닷홈
-answotlr12.dothome.co.kr/gn
+moonjong.dothome.co.kr/genesis
 
-리파지토리
+리파지토리  
 genesis
 
 origin 오리진(리파지토리 웹주소 URL)
-https://github.com/jaesik16/genesis.git
+https://github.com/moonjongjs/genesis.git
 
 
 명령어 우분투(윈도우에서 리눅스 명령어)
 깃배쉬
 gitbash
-https://git-scm.com/
+
+git-scm.com
 
 깃허브(버전관리==형상관리, 협업)
-// 1. 깃 설정
-git init
+// 1. 깃설정
+git  init
+
+// 2. 목록보기 숨김목록까지 모두 보기
+ls  -la
 
 
-// 2. 목록보기 숨긴목록까지 모두 보기
-ls -la
-
-// 3. 환경설정
+// 3. 환경설정  
 웹브라우저에는 로그인 상태에서
 본인 아이디(name) 등록
 본인 이메일(email) 등록
 
+git config user.name "moonjongjs"
+git config user.email "moonseonjong@naver.com"
 
-git config user.name "jaesik16"
-git config user.email "qweqwexz@naver.com"
 git config user.name
 git config user.email
 
-// 4. 원격으로 오리진 등록(추가 add)
-http://
-https://  ssl 웹 보안 인증서
 
-https://github.com/jaesik16/genesis.git
+// 4. 원격으로 오리진 등록(추가)
+http://
+https:// ssl 웹보안인증서
+
+https://github.com/moonjongjs/genesis.git
 CORS
 프록시 서버
 오리진 헤더코딩 사용가능하도록 정책
+http://moonjong.co.kr/member.php
+http://moonjong.co.kr/member.jsp
 
 추가
-git remote add origin https://github.com/jaesik16/genesis.git
+git  remote  add  origin  https://github.com/moonjongjs/genesis.git
 
-오리진 주소가 잘못 기록된 경우 삭제
-git remote remove origin https://github.com/jaesik16/genesis.git
+오리진 주소가 잘못 기록된경우 
+삭제하고
+git  remote  remove  origin
+git  remote  -v
 
-다시 추가
-git remote add origin https://github.com/jaesik16/genesis.git
+
+
+다시추가 한다.
+git  remote  add  origin  https://github.com/moonjongjs/genesis.git
+git  remote  -v
+
 
 
 확인
 git remote -v
+origin  https://github.com/moonjongjs/genesis.git (fetch)
+origin  https://github.com/moonjongjs/genesis.git (push)
 
-origin  https://github.com/jaesik16/genesis.git (fetch)
-origin  https://github.com/jaesik16/genesis.git (push)
+clear 화면지우기(청소)
 
+git config  --list
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+usr.name=moonjongjs01~
+usr.email=moonseonjong@naver.com
+user.name=moonjongjs
+user.email=moonseonjong@naver.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+user.name=moonjongjs
+user.email=moonseonjong@naver.com
+remote.origin.url=https://github.com/moonjongjs/genesis.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 
-clear은 화면지우기(청소)
-
-모든 리스트 보기
-git config --list
-
+clear 화면지우기(청소)
 
 // 5. 스테이징
-git add .
+git  add  .
 
-// 6. 커밋
-git commit -m '모바일 터치 이벤트 추가'
+// 6. 커밋 
+git commit  -m  '모바일 터치이벤트 추가'
 
 // 7. 푸쉬
-git push origin master
+git push  origin  master
 
-// 8. 인증이 되어야 푸시 완료
-window => 설정 => 자격 증명 관리자 검색 => window 자격 증명 관리 클릭
-github 웹주소가 있고 본인의 user.name user.password가 저장되어 관리된다.
-한 컴퓨터에서 여러 사용자가 사용시 추가 등록해서 사용 가능
+// 8. 인증이 되어야 푸쉬가 완료된다.
+window => 설정 => 자격증명 검색 => window 자격증명관리를 클릭
+github 웹주소가 있고 본인의 user.name user.password가 저장된어 관리된다.
+한 컴퓨터에서 여러 사용자가 사용시 추가 등록해서 사용가능하다.
 
-// 9. 깃허브에서 새로고침 올라온 파일 확인
+// 9. 깃허브 에서 새로고침  올라온파일 확인
 푸쉬한 모든 데이터 확인
 
 // 10. settings 클릭
-
-// 11. 좌측 카테고리 메뉴 중 Paegs 클릭
-
-// 12. Github Pages => Branch => master클릭 => save 클릭 => 1분~3분 대기 => 새로고침
-
-// 13. 상단에 배포주소가 나타난다. Visit Site 클릭 배포된 홈페이지 브라우저에 나타난다.
-https://jaesik16.github.io/genesis
-https://jaesik16.github.io/genesis/ <= 배포된 주소
+// 11. 좌측 카테고리 메뉴중  Pages 클릭
+// 12. GitHub Pages => 아래 중간에 => Branch => master => save 클릭 
+       => 1분~3분 대기 => 새로고침
+// 13. 상단에 배포주소가 나타난다. 
+       Your site is live at 
+       https://moonjongjs.github.io/genesis/
+       https://moonjongjs.github.io/genesis
+       Visit Site  클릭! 
+       배포된 홈페이지 브라우저에 나타난다.
